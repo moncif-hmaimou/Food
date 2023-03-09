@@ -1,0 +1,800 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+
+.searchsec {
+  width: 100%;
+  height: 170vh;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+.search-bar {
+  width: 80%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.search-bar h2 {
+  margin: 10px;
+}
+.text1 {
+  margin: 10px;
+  width: 800px;
+}
+.list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  /* flex-direction: column; */
+}
+#h1 {
+  margin: 10px;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+#h1:hover {
+  transform: scale(1.1);
+  color: rgb(13, 196, 209);
+}
+
+nav {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+nav h1 {
+  margin: 7.5px;
+  margin-left: 30px;
+  color: rgb(22, 22, 22);
+  cursor: pointer;
+  transition: 1s;
+}
+.bur2 {
+  position: absolute;
+  width: 20px;
+  top: 12px;
+  left: 70px;
+  transition: 1s;
+  opacity: 0;
+  z-index: 0;
+}
+
+.bur {
+  position: absolute;
+  width: 20px;
+  top: 12px;
+  left: 70px;
+  transition: 1s;
+  opacity: 0;
+  z-index: 0;
+}
+nav h1:hover ~ .bur2 {
+  opacity: 1;
+  width: 20px;
+  transform: translate(54px, 8px);
+}
+
+nav h1:hover ~ .bur {
+  transform: translateX(30px);
+  opacity: 1;
+  width: 30px;
+}
+nav h1:hover {
+  transform: scale(1.1);
+}
+nav h1 span {
+  color: tomato;
+}
+.ul1 {
+  display: flex;
+  margin-right: 20px;
+}
+.ul1 li a::before {
+  content: "";
+  width: 0%;
+  height: 26px;
+  background-color: rgb(225, 247, 35);
+  position: absolute;
+  left: -4%;
+  top: -1px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 3px;
+
+  /* opacity: 0; */
+
+  transition: 0.5s ease-in-out;
+}
+/* .ul1 li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: tomato;
+    position: absolute;
+    left: 0px;
+     bottom: -18px; 
+    top: 23px;
+    
+    transition: 0.5s ease-in-out;
+} */
+/* .ul1 li:hover a::after{
+    
+    width: 100%;
+   
+
+} */
+.ul1 li:hover a::before {
+  width: 110%;
+}
+/* .ul1 li:hover a{
+    color: white;
+} */
+
+nav ul li {
+  list-style-type: none;
+  margin: 14px;
+}
+.ul1 li a {
+  transition: 3 ease-in-out;
+}
+nav ul li a {
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+  position: relative;
+  z-index: 5;
+}
+#burger {
+  position: absolute;
+  background-color: transparent;
+  width: 50px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.sec1::before {
+  opacity: 0.1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("kit.jpeg");
+  animation: animat 100s linear infinite;
+  margin-top: 55px;
+  height: 70vh;
+}
+#bu {
+  position: absolute;
+}
+#pi {
+  position: absolute;
+}
+@keyframes animat {
+  0% {
+    background-position-x: 0;
+  }
+  50% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
+.sec1 {
+  margin-top: 55px;
+
+  overflow: hidden;
+  max-width: 100%;
+  height: 70vh;
+
+  z-index: -2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+}
+.bigtitle {
+  position: relative;
+
+  width: 48%;
+
+  padding: 35px;
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+}
+.bigtitle h1 {
+  word-spacing: 5px;
+  margin-bottom: 19px;
+}
+.ac {
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.ac a {
+  width: auto;
+  left: 30%;
+  transform: translateX(30%);
+  text-decoration: none;
+  color: tomato;
+  border: 2px solid tomato;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.ac:hover a {
+  border: 2px solid white;
+}
+.ac:hover {
+  transform: translateY(-5px);
+}
+
+.sec1 img {
+  cursor: pointer;
+  position: relative;
+
+  width: 40%;
+  transform: translateY(-13%);
+
+  transition: 1s;
+  animation: animate 5s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-13%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-13%);
+  }
+}
+
+.sec2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.sec2 h1 {
+  margin-top: 30px;
+  color: rgb(51, 51, 51);
+  opacity: 0.8;
+}
+.sec2 h1 span {
+  color: red;
+}
+.all8sec {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+.of8:hover {
+  transform: scale(1.05);
+}
+
+.of8:hover::before {
+  transform: translateY(0%);
+}
+
+.of8 {
+  transition: 0.8s;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgb(199, 199, 199);
+  margin: 10px;
+
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .d1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  background-image: url("hamburger-494706_1920.jpg");
+  background-size: cover;
+  z-index: 100;
+  transform: translateY(-100%);
+} */
+#img77 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -110%;
+  left: -10px;
+  transition: 1s;
+}
+.d1:hover #img77 {
+  top: -10px;
+}
+.d2::before {
+  content: "";
+  position: absolute;
+  background-image: url("pizza-5179939_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+
+  z-index: 100;
+  transform: translateY(-100%);
+}
+.d3::before {
+  content: "";
+  position: absolute;
+  background-image: url("cup-829527_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+
+  z-index: 100;
+  transform: translateY(-100%);
+}
+.d4::before {
+  content: "";
+  position: absolute;
+  background-image: url("hamburger-494706_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+
+  z-index: 100;
+  transform: translateY(-100%);
+}
+.d5::before {
+  content: "";
+  position: absolute;
+  background-image: url("pizza-5179939_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+
+  z-index: 100;
+  transform: translateY(-100%);
+}
+.d6::before {
+  content: "";
+  position: absolute;
+  background-image: url("cup-829527_1920.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+
+  z-index: 100;
+  transform: translateY(-100%);
+}
+.of8 img {
+  margin: 10px;
+  width: 80px;
+}
+.of8 p {
+  width: 80%;
+  margin-top: 5px;
+  text-align: center;
+}
+.sec3 {
+  background-color: whitesmoke;
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.sec3 h1 {
+  margin-top: 30px;
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+.sec3 h1 span {
+  color: red;
+}
+
+.o3all {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.o3 {
+  width: 350px;
+  height: 380px;
+  background-color: white;
+  border: 2px solid rgb(199, 199, 199);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin: 15px;
+  cursor: pointer;
+  transition: 1s;
+
+  position: relative;
+}
+.o3:hover {
+  transform: translateY(-3%);
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.15);
+}
+.o3 h2 {
+  z-index: 3;
+  font-size: 20px;
+  color: whitesmoke;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: tomato;
+  border-radius: 10px;
+}
+.head1 {
+  position: absolute;
+  width: 86%;
+  height: 55%;
+  background-image: url("hamburger-494706_1920.jpg");
+  background-size: cover;
+  top: 7%;
+  left: 7%;
+  right: 7%;
+  border-radius: 10px;
+}
+.head2 {
+  position: absolute;
+  width: 86%;
+  height: 55%;
+  background-image: url("pizza-5179939_1920.jpg");
+  background-size: cover;
+  top: 7%;
+  left: 7%;
+  right: 7%;
+  border-radius: 10px;
+}
+.head3 {
+  position: absolute;
+  width: 86%;
+  height: 55%;
+  background-image: url("cup-829527_1920.jpg");
+  background-size: cover;
+  top: 7%;
+  left: 7%;
+  right: 7%;
+  border-radius: 10px;
+}
+.o3 h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 66%;
+}
+
+.checked {
+  color: orange;
+}
+.stars {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 75%;
+}
+.o3 a {
+  text-decoration: none;
+  color: red;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 86%;
+  font-size: 17px;
+  padding: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: 2px solid red;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.o3 a:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: red;
+  border: 2px solid red;
+}
+.how {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  background-color: white;
+  flex-wrap: wrap;
+  align-items: center;
+
+  flex-direction: column;
+  margin-top: 30px;
+  position: relative;
+}
+.how h1 {
+  color: black;
+}
+.how h1 span {
+  color: red;
+}
+.contain {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.choose {
+  width: 250px;
+  height: auto;
+  margin: 2px;
+
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.choose .img {
+  margin-bottom: 15px;
+  width: 122px;
+  border-radius: 50%;
+  height: 122px;
+  border: 4px solid rgb(255, 0, 0);
+  cursor: pointer;
+  background-image: url("food.png");
+  background-size: cover;
+  transition: 1s;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.choose .img:hover {
+  transform: scale(1.1);
+}
+
+/* wave */
+.wavesec {
+  width: 100%;
+  height: 30vh;
+  background-color: red;
+  position: relative;
+  display: flex;
+  background-image: url("wave.png");
+}
+@keyframes right {
+  from {
+    opacity: 0.3;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes test {
+  from {
+    opacity: 0.3;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes anim1 {
+  from {
+    opacity: 0.3;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes anim2 {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes anim3 {
+  from {
+    opacity: 0;
+    transform: translate(70px, 70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px, 30px);
+  }
+}
+@keyframes anim4 {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* sec5 */
+.sec5 {
+  background-color: white;
+
+  width: 100%;
+  height: 80vh;
+
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+}
+.container img {
+  width: 100%;
+  object-position: cover;
+  z-index: 3;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+/* .container img::before{
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    z-index: 4;
+    width: 100%;
+    height: 100px;
+    
+} */
+.container img:hover {
+  transform: scale(1.1);
+  /* opacity: 0.5; */
+  filter: brightness(60%);
+}
+#left {
+  position: absolute;
+  z-index: 4;
+  width: 50px;
+  top: 85%;
+  left: 10px;
+  color: white;
+  cursor: pointer;
+}
+#right {
+  position: absolute;
+  z-index: 4;
+  transform: rotate(180deg);
+  top: 85%;
+  width: 50px;
+  cursor: pointer;
+  right: 10px;
+  color: white;
+}
+@keyframes jj {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  #burger {
+    display: block;
+  }
+  .bigphoto {
+    display: none;
+  }
+
+  .ul1 {
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    left: 0px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 55px;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(110%);
+    z-index: 2;
+    border-radius: 0 0 10px 10px;
+    transition: 0.8s;
+  }
+
+  .ul1.move {
+    transform: translateX(0%);
+  }
+
+  .sec1 {
+    flex-direction: column;
+  }
+  .bigtitle {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .bigphoto {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .sec1 {
+    height: 125vh;
+    padding: 0px;
+    height: 50vh;
+    text-align: center;
+  }
+  .sec1::before {
+    height: 50vh;
+  }
+  nav h1 {
+    margin: 0px;
+    margin-top: 13px;
+    margin-left: 20px;
+  }
+}
